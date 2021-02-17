@@ -96,7 +96,7 @@ header{
     background: #fafafafa;
     border-radius: 100%;
     color: #787878;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     cursor: pointer;
@@ -370,10 +370,11 @@ article img{
         left: 0px;
         background: #fff;
         overflow: hidden;
+        transform: translateX(-350px);
         box-shadow: 10px 0 20px -25px black;
     }
 
-    .menu{
+    .show-lateral{
         width: 300px;
         transform: translateX(0px);
     }
@@ -402,6 +403,10 @@ article img{
         display: inline-block;
         margin-right: 10px;
         color: red;
+    }
+
+    #icon-menu{
+        display: flex;
     }
 
     .container-aside{
