@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
 
 *{
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 /*header*/
@@ -63,7 +63,7 @@ header{
 }
 
 .menu-selected:before{
-    content: "";
+    content: '';
     width: 100%;
     height: 4px;
     background: #d63031;
@@ -75,15 +75,19 @@ header{
 .menu nav ul li a{
     color: gray;
     font-size: 18px;
+    transition: color 300ms;
 }
 
 .menu nav ul li a:hover{
     color: #d63031;
-    transition: color 300ms ;
 }
 
 .menu .text-menu-selected{
     color: #d63031;
+}
+
+.menu nav ul li a i{
+    display: none;
 }
 
 #icon-menu{
@@ -92,6 +96,7 @@ header{
     position: absolute;
     right: 20px;
     top: 16px;
+    padding: 10px;
     font-size: 20px;
     background: #fafafafa;
     border-radius: 100%;
@@ -119,17 +124,17 @@ header{
     height: 500px;
     position: relative;
     margin-top: 80px;
-    background-image: url(../fondos/patron-colorido-abstracto_1920x1080_xtrafondos.com.jpg);
+    background-image: url(../fondos/df779656298d81237056a5449aa122c4.jpg);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
 .container-cover::before{
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
-    background: rgba(219, 67, 105, 0.8);
+    background: rgba(29, 31, 179, 0.8);
     position: absolute;
     top: 0;
     left: 0;
@@ -153,14 +158,12 @@ header{
     font-weight: 500;
     color: #fff;
     margin-bottom: 20px;
-    font-family: 'Hachi Maru Pop', cursive;
 }
 
 .container-cover-info p{
     color: #fff;
     font-size: 20px;
-    font-weight: 500;
-    font-family: 'Hachi Maru Pop', cursive;
+    font-weight: 300;
 }
 
 /*contenido del articulo*/
@@ -179,12 +182,12 @@ article{
     padding-bottom: 40px;
     box-shadow: -20px 0 20px -30px black ;
     border-radius: 6px;
-    overflow: hidden;
     position: relative;
+    overflow: hidden;
 }
 
 article::before{
-    content: "";
+    content: '';
     width: 100%;
     height: 6px;
     position: absolute;
@@ -214,7 +217,8 @@ article img{
 
 .container-aside aside{
     width: 320px;
-    border-radius: 0 0 20px -20px black;
+    border-right: 6px;
+    box-shadow: 0 0 20px -20px black;
     overflow: hidden;
     border-radius: 6px;
     margin-left: 40px;
@@ -318,13 +322,14 @@ article img{
     font-weight: 500;
 }
 
-/* Responsive design*/
+/* Responsive design*/ 
+
 
 @media screen and (max-width: 1220px){
 
     .header-content,
     .container-content,
-    .container-footer{
+    .container-footer footer{
         max-width: 1000px;
         padding: 0 20px;
     }
@@ -357,10 +362,17 @@ article img{
 }
 
 @media screen and (max-width: 800px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .container-all{
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
     
     .move-container-all{
         transform: translateX(300px);
-        transition: all 300ms cubic-bezier(1,0,0,1);
     }
 
     .menu{
