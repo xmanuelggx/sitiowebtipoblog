@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Reggae+One&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: sans-serif;
 }
 
 /*header*/
@@ -120,7 +120,7 @@ header{
 
 
 .container-cover{
-    width: 100%;
+    width: auto;
     height: 500px;
     position: relative;
     margin-top: 80px;
@@ -158,6 +158,7 @@ header{
     font-weight: 500;
     color: #fff;
     margin-bottom: 20px;
+    font-family: 'Reggae One', cursive;
 }
 
 .container-cover-info p{
@@ -331,8 +332,9 @@ article img{
     .container-content,
     .container-footer footer{
         max-width: 1000px;
-        padding: 0 20px;
+        padding: 0px 20px;
     }
+
 
 }
 
@@ -365,6 +367,17 @@ article img{
 
     body{
         overflow-x: hidden;
+    }
+
+    .container-cover{
+        background-size: cover;
+        background-position-x: right;
+
+    }
+
+    .container-cover-info{
+        width: auto;
+        padding: 15px;
     }
 
     .container-all{
